@@ -1067,3 +1067,27 @@ li {
     gap: 15px;
   }
 }
+
+@media (max-width: 991px) {
+  .product-box {
+    width: calc(50% - 20px);
+  }
+
+  #banner {
+    flex-direction: column;
+  }
+
+  #banner .banner-box,
+  #banner .banner-box2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .section-p1 {
+    padding: 40px 20px;
+  }
+
+  #features {
+    gap: 15px;
+  }
+}
