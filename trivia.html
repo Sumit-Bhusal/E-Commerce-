@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia Page</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"><img src="images/trendify.webp" class="logo" alt="" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a class="active" href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="bag">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+    <!-- Trivia Section -->
+    <section id="trivia">
+      <!-- Question 1 -->
+      <div class="trivia-question">
+        <p>
+          In which year was the first iPhone released, and what was its most
+          groundbreaking feature at the time?
+        </p>
+        <textarea
+          id="answer1"
+          placeholder="Enter your answer here..."
+        ></textarea>
+        <button data-question="1">Submit Answer</button>
+        <p id="result1"></p>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="trivia-question">
+        <p>
+          Which smartwatch was the first to feature a built-in ECG monitor, and
+          how did it change the health tech landscape?
+        </p>
+        <textarea
+          id="answer2"
+          placeholder="Enter your answer here..."
+        ></textarea>
+        <button data-question="2">Submit Answer</button>
+        <p id="result2"></p>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="trivia-question">
+        <p>
+          In 1994, which company launched the first smartphone with a color
+          display, and how did it pave the way for modern smartphones?
+        </p>
+        <textarea
+          id="answer3"
+          placeholder="Enter your answer here..."
+        ></textarea>
+        <button data-question="3">Submit Answer</button>
+        <p id="result3"></p>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="trivia-question">
+        <p>
+          Which company developed the first commercially successful
+          Android-powered smartphone, and what was the phone’s name?
+        </p>
+        <textarea
+          id="answer4"
+          placeholder="Enter your answer here..."
+        ></textarea>
+        <button data-question="4">Submit Answer</button>
+        <p id="result4"></p>
+      </div>
+    </section>
+
+    <section id="pagination">
+      <a href="blog.html">1</a>
+      <a href="trivia.html">2</a>
+      <a href="trivia.html"><i class="fas fa-long-arrow-alt-right"></i></a>
+    </section>
+
+    <section id="updates">
+      <div class="join">
+        <h4>Sign Up Now</h4>
+        <p>Get updates about us directly through your email.</p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="your email address" />
+        <button>Sign Up</button>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="footer-container">
+        <!-- Left Column -->
+        <div class="footer-left">
+          <!-- Company Logo (Replaced FontAwesome icon with actual image) -->
+          <img
+            src="images/trendify.webp"
+            alt="Company Logo"
+            class="footer-logo"
+          />
+
+          <!-- Contact Information -->
+          <div class="footer-contact">
+            <h3>Contact</h3>
+            <p><strong>Address:</strong> [Your Address]</p>
+            <p><strong>Phone:</strong> [Your Phone Number]</p>
+            <p><strong>Availability:</strong> Monday - Friday, 9 AM to 6 PM</p>
+          </div>
+          <br />
+
+          <!-- Social Media Links (Icons in same row) -->
+          <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="footer-right">
+          <h3>About</h3>
+          <div class="footer-about">
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+
+        <!-- Third Column (My Account) -->
+        <div class="footer-account">
+          <h3>My Account</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-cart-plus"></i> View Cart</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-heart"></i> My Wishlist</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-truck"></i> Track My Order</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Fourth Column (Install App & Payment Gateways) -->
+        <div class="footer-app">
+          <h3>Install App</h3>
+          <p>From App Store or Google Play Store</p>
+          <div class="footer-app-buttons">
+            <a href="#" target="_blank"
+              ><img
+                src="Footer/appstore.png"
+                style="background-color: white"
+                alt="App Store"
+                class="app-store"
+            /></a>
+            <a href="#" target="_blank"
+              ><img
+                src="Footer/playstore.png"
+                alt="Google Play"
+                class="google-play"
+            /></a>
+          </div>
+
+          <!-- Payment Gateways -->
+          <div class="footer-payment">
+            <h3>Secured Payment Gateways</h3>
+            <ul>
+              <li>
+                <img src="Footer/visa.jfif" alt="Visa" class="payment-logo" />
+              </li>
+              <li>
+                <img
+                  src="Footer/mastercard.jpg"
+                  alt="Mastercard"
+                  class="payment-logo"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Shopsphere. All rights reserved.</p>
+        <p>Designed by Your Company</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
