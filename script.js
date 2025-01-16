@@ -192,7 +192,58 @@ document.addEventListener("DOMContentLoaded", () => {
     // Proceed to checkout
     document.getElementById("checkout-btn").addEventListener("click", () => {
       alert("Proceeding to checkout!");
-      // Implement payment logic here
     });
   }
 });
+
+// Payment Logic
+function showPopup(type) {
+  document.getElementById("overlay").style.display = "block";
+  if (type === "credit-card") {
+    document.getElementById("credit-card-popup").style.display = "block";
+  } else if (type === "cash-on-delivery") {
+    document.getElementById("cash-on-delivery-popup").style.display = "block";
+  }
+}
+
+function hidePopups() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("credit-card-popup").style.display = "none";
+  document.getElementById("cash-on-delivery-popup").style.display = "none";
+}
+
+document.getElementById("overlay").addEventListener("click", hidePopups);
+
+function validatePayment(type) {
+  if (type === "credit-card") {
+    const ccNumber = document.getElementById("cc-number").value;
+    const ccName = document.getElementById("cc-name").value;
+    const ccCVV = document.getElementById("cc-cvv").value;
+    const address = document.getElementById("address").value;
+
+    if (
+      !ccNumber ||
+      !ccName ||
+      !ccCVV ||
+      !address ||
+      ccNumber.length !== 16 ||
+      ccCVV.length < 3
+    ) {
+      alert("Invalid details. Please check and try again.");
+      return;
+    }
+
+    alert("Payment successful! Your order will be delivered soon.");
+    hidePopups();
+  } else if (type === "cash-on-delivery") {
+    const codAddress = document.getElementById("cod-address").value;
+
+    if (!codAddress) {
+      alert("Invalid address. Please provide a valid address.");
+      return;
+    }
+
+    alert("Order placed! Pay on delivery.");
+    hidePopups();
+  }
+}

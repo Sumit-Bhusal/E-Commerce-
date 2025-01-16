@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart</title>
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Options</title>
   </head>
   <body>
     <section id="header">
@@ -27,9 +27,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li id="bag">
-            <a href="cart.html" class="active"
-              ><i class="fa-solid fa-cart-shopping"></i
-            ></a>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
           </li>
           <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
         </ul>
@@ -39,30 +37,43 @@
         <i id="bar" class="fas fa-outdent"></i>
       </div>
     </section>
+    <div class="container">
+      <h2>Select Your Payment Option</h2>
+      <div class="payment-option" onclick="showPopup('credit-card')">
+        <span>Credit Card Payment</span>
+        <i
+          class="fas fa-credit-card"
+          style="font-size: 24px; color: rebeccapurple"
+        ></i>
+      </div>
 
-    <table id="cart-table">
-      <thead>
-        <tr>
-          <th>Image</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Total</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody id="cart-items"></tbody>
-    </table>
-    <p id="Grand-Total">Grand Total: $<span id="cart-total">0.00</span></p>
+      <div class="payment-option" onclick="showPopup('cash-on-delivery')">
+        <span>Cash on Delivery</span>
+        <i class="fas fa-truck" style="font-size: 24px; color: #088178"></i>
+      </div>
+    </div>
 
-    <button
-      class="checkout-btn"
-      id="checkout-btn"
-      onclick="window.location.href='payment.html'"
-    >
-      Proceed to Checkout
-    </button>
+    <div class="overlay" id="overlay"></div>
 
+    <div class="popup" id="credit-card-popup">
+      <h3>Credit Card Payment</h3>
+      <input
+        type="text"
+        id="cc-number"
+        placeholder="Credit Card Number"
+        maxlength="16"
+      />
+      <input type="text" id="cc-name" placeholder="Name on Card" />
+      <input type="text" id="cc-cvv" placeholder="CVV" maxlength="4" />
+      <input type="text" id="address" placeholder="Delivery Address" />
+      <button onclick="validatePayment('credit-card')">Pay Now</button>
+    </div>
+
+    <div class="popup" id="cash-on-delivery-popup">
+      <h3>Cash on Delivery</h3>
+      <input type="text" id="cod-address" placeholder="Delivery Address" />
+      <button onclick="validatePayment('cash-on-delivery')">Place Order</button>
+    </div>
     <footer id="footer">
       <div class="footer-container">
         <!-- Left Column -->
