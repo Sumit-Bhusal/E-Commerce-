@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Login to Trendify</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f7fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Login Section */
+      #login-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #f4f7fc;
+      }
+
+      .login-container {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 6px;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+
+      .form-group input:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+      }
+
+      button.login-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button.login-button:hover {
+        background-color: #0056b3;
+      }
+
+      p {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      p a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      p a:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+    <section id="login-section">
+      <div class="login-container">
+        <h1>Login to Trendify</h1>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <button type="submit" class="login-button">Login</button>
+        </form>
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+      </div>
+    </section>
+    <script>
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent form submission
+
+          // Basic validation demo
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          // Example credentials
+          if (email === "demo@example.com" && password === "demoPass123") {
+            alert("Login successful!");
+            window.location.href = "index.html"; // Redirect to the home page
+          } else {
+            alert("Invalid email or password. Try again.");
+          }
+        });
+    </script>
+  </body>
+</html>
