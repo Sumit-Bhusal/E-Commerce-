@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Trendify: Your one-stop shop for smartphones, smartwatches, and more!"/>
+<meta name="keywords" content="smartphones, smartwatches, shopping, electronics, Trendify"/>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -29,7 +32,7 @@
           <li><a href="contact.html">Contact</a></li>
           <li id="bag">
             <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-          </li>
+            
           <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
         </ul>
       </div>
@@ -38,6 +41,8 @@
         <i id="bar" class="fas fa-outdent"></i>
       </div>
     </section>
+    <li id="login-btn"><a href="login.html">SignUp<hr style="border: none; height: 1px; background-color: white; margin: 10px 0;">Login</a></li>
+          </li>
     <section id="intro">
       <h4>Hurry Up!</h4>
       <br />
@@ -47,7 +52,7 @@
       <br />
       <p>Shop Smart, Save Big – Unmatched Quality at the Best Price!</p>
       <br />
-      <button class="show-now-button">
+      <button class="show-now-button" onclick="window.location.href='shop.html'">
         <i class="fa-solid fa-cart-shopping"></i>Shop Now
       </button>
     </section>
@@ -273,7 +278,7 @@
             </li>
           </ul>
         </div>
-        
+
         <!-- Fourth Column (Install App & Payment Gateways) -->
         <div class="footer-app">
           <h3>Install App</h3>
@@ -320,6 +325,11 @@
         <p>Designed by Your Company</p>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js">
+        // Check if the user is logged in
+        if (localStorage.getItem('isLoggedIn')) {
+        document.getElementById('login-btn').style.display = 'none'; // Hide login button if logged in
+      }
+    </script>
   </body>
 </html>

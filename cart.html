@@ -173,6 +173,17 @@
         <p>Designed by Your Company</p>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js">
+         // Check if user is logged in before allowing checkout
+         document.getElementById('checkout-btn').addEventListener('click', function () {
+        if (!localStorage.getItem('isLoggedIn')) {
+          alert('Please log in to proceed with the checkout.');
+          window.location.href = 'login.html'; // Redirect to login page
+        } else {
+          // Proceed with checkout (this part can be expanded later)
+          alert('Proceeding to checkout...');
+        }
+      });
+    </script>
   </body>
 </html>
